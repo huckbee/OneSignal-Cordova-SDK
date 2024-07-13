@@ -111,11 +111,6 @@
 - (void)addUniqueOutcome:(CDVInvokedUrlCommand* _Nonnull)command;
 - (void)addOutcomeWithValue:(CDVInvokedUrlCommand* _Nonnull)command;
 
-// Location
-- (void)requestLocationPermission:(CDVInvokedUrlCommand* _Nonnull)command;
-- (void)setLocationShared:(CDVInvokedUrlCommand* _Nonnull)command;
-- (void)isLocationShared:(CDVInvokedUrlCommand* _Nonnull)command;
-
 - (void)setLanguage:(CDVInvokedUrlCommand* _Nonnull)command;
 
 // Live Activity
