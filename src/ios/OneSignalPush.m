@@ -590,23 +590,6 @@ static Class delegateClass = nil;
 }
 
 /**
- * Location
- */
-
-- (void)requestLocationPermission:(CDVInvokedUrlCommand*)command {
-    [OneSignal.Location requestPermission];
-}
-
-- (void)setLocationShared:(CDVInvokedUrlCommand *)command {
-    [OneSignal.Location setShared:[command.arguments[0] boolValue]];
-}
-
-- (void)isLocationShared:(CDVInvokedUrlCommand *)command {
-    bool isShared = [OneSignal.Location isShared];
-    successCallbackBoolean(command.callbackId, isShared);
-}
-
-/**
  * Live Activities
  */
 
