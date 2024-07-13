@@ -97,40 +97,7 @@ class OSButtons extends React.Component<Props> {
         ];
     }
 
-    createLocationFields() {
-        const { loggingFunction } = this.props;
-        const locationShared = renderButtonView('Is Location Shared', async () => {
-            const isLocationShared = await OneSignal.Location.isShared();
-            loggingFunction(
-                `Application has location shared active: ${isLocationShared}`,
-            );
-        });
 
-        const setLocationShared = renderButtonView('Share Location', () => {
-            loggingFunction('Sharing location');
-            OneSignal.Location.setShared(true);
-        });
-
-        const setLocationUnshared = renderButtonView('Unshare Location', () => {
-            loggingFunction('Unsharing location');
-            OneSignal.Location.setShared(false);
-        });
-
-        const requestPermissionButton = renderButtonView(
-            'Request Location Permission',
-            () => {
-                loggingFunction('Request Location permission');
-                OneSignal.Location.requestPermission();
-            },
-        );
-
-        return [
-            locationShared,
-            setLocationShared,
-            setLocationUnshared,
-            requestPermissionButton,
-        ];
-    }
 
     createNotificationFields() {
         const { loggingFunction } = this.props;
@@ -542,8 +509,6 @@ class OSButtons extends React.Component<Props> {
             <IonContent>
                 <IonText className='ion-text-center'><h5>In-App Messages</h5></IonText>
                 <div>{this.createInAppMessagesFields()}</div>
-                <IonText className='ion-text-center'><h5>Location</h5></IonText>
-                <div>{this.createLocationFields()}</div>
                 <IonText className='ion-text-center'><h5>Notifications</h5></IonText>
                 <div>{this.createNotificationFields()}</div>
                 <IonText className='ion-text-center'><h5>Session</h5></IonText>

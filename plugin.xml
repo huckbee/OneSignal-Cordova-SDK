@@ -32,7 +32,6 @@
   <js-module src="dist/DebugNamespace.js" name="DebugNamespace" />
   <js-module src="dist/InAppMessagesNamespace.js" name="InAppMessagesNamespace" />
   <js-module src="dist/SessionNamespace.js" name="SessionNamespace" />
-  <js-module src="dist/LocationNamespace.js" name="LocationNamespace" />
   <js-module src="dist/NotificationsNamespace.js" name="NotificationsNamespace" />
   <js-module src="dist/LiveActivitiesNamespace.js" name="LiveActivitiesNamespace" />
 
